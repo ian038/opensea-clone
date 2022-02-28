@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import openseaLogo from '../assets/opensea.png'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
