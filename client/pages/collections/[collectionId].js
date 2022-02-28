@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { useWeb3 } from '@3rdweb/hooks'
-import { client } from '../../lib/sanityClient'
+import { client } from '../../utils/sanity'
 import { ThirdwebSDK } from '@3rdweb/sdk'
 import Header from '../../components/Header'
 import { CgWebsite } from 'react-icons/cg'
@@ -28,7 +28,7 @@ const style = {
   statValue: `text-3xl font-bold w-full flex items-center justify-center`,
   ethLogo: `h-6 mr-2`,
   statName: `text-lg w-full text-center mt-1`,
-  description: `text-[#8a939b] text-xl w-max-1/4 flex-wrap mt-4`,
+  description: `text-[#8a939b] text-xl w-max-1/4 flex-wrap mt-4`
 }
 
 const Collection = () => {
@@ -85,10 +85,6 @@ const Collection = () => {
     }`
 
     const collectionData = await sanityClient.fetch(query)
-
-    console.log(collectionData, '🔥')
-
-    // the query returns 1 object inside of an array
     await setCollection(collectionData[0])
   }
 
@@ -186,7 +182,7 @@ const Collection = () => {
           <div className={style.description}>{collection?.description}</div>
         </div>
       </div>
-      {/* <div className="flex flex-wrap ">
+      <div className="flex flex-wrap ">
         {nfts.map((nftItem, id) => (
           <NFTCard
             key={id}
@@ -195,7 +191,7 @@ const Collection = () => {
             listings={listings}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   )
 }
