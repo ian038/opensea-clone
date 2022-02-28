@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/Header'
+import Hero from '../components/Hero'
 
 const style = {
   wrapper: ``,
@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <div className={style.wrapper}>
       <Header />
+      <Hero />
     </div>
   )
 }
