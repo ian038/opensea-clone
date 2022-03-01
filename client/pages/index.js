@@ -31,7 +31,7 @@ export default function Home() {
         _type: 'users',
         _id: address,
         userName: 'Unnamed',
-        walletAddress: address,
+        walletAddress: address
       }
 
       const result = await client.createIfNotExists(userDoc)

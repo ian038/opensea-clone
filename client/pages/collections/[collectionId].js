@@ -46,7 +46,6 @@ const Collection = () => {
     return sdk.getNFTModule(collectionId)
   }, [provider])
 
-  // get all NFTs in the collection
   useEffect(() => {
     if (!nftModule) return
     ;(async () => {
@@ -63,7 +62,6 @@ const Collection = () => {
     return sdk.getMarketplaceModule('0xA8B992445E5398A6932e2df222B3497557E4F9C9')
   }, [provider])
 
-  // get all listings in the collection
   useEffect(() => {
     if (!marketPlaceModule) return
     ;(async () => {
