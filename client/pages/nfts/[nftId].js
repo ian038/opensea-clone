@@ -5,6 +5,7 @@ import { ThirdwebSDK } from '@3rdweb/sdk'
 import { useRouter } from 'next/router'
 import NFTImage from '../../components/nft/NFTImage'
 import GeneralDetails from '../../components/nft/GeneralDetails'
+import ItemActivity from '../../components/nft/ItemActivity'
 import Purchase from '../../components/nft/Purchase'
 
 const style = {
@@ -74,6 +75,7 @@ const Nft = () => {
                 />
               </div>
             </div>
+            <ItemActivity />
           </div>
         </div>
       </div>
